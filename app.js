@@ -1,33 +1,17 @@
 
-
-
-const calcAverage = (score1, score2, score3) => {
-    const average= (score1 + score2 + score3)/3;
-    return average ;
+"use strict";
+function calcTip (bill){
+  const resultat= bill >=50 && bill<=300 ? bill*0.15 : bill*0.2
+  return resultat
 }
+console.log(calcTip(100))
+const bills =[125,555,44]
+console.log(bills)
+const tipValue1=calcTip(bills[0])
+const tipValue2=calcTip(bills[1])
+const tipValue3=calcTip(bills[2])
+const tips =[tipValue1,tipValue2,tipValue3]
+console.log(tips)
 
-console.log(calcAverage(44,23,71));
-
-console.log(calcAverage(65,54,49));
-
-console.log(calcAverage(85,54,41));
-console.log(calcAverage(23,34,27))
-
-
-
-
-function checkWinner (avgDolphins,avgKoalas){
-    if (avgDolphins >=  2 *  avgKoalas) {
-    return `dolphins win (${avgDolphins} vs ${avgKoalas})` }
-    else if (avgKoalas >= 2*avgDolphins){
-    return  `koalas win (${avgKoalas} vs ${avgDolphins})`
-    }
-    else{
-        return `no team wins`
-    }
- 
- 
-}
-
-console.log(checkWinner(46,56))
-console.log(checkWinner(60,28))
+const total=[bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]];
+console.log(total)
